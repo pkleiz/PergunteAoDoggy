@@ -1,0 +1,43 @@
+<!-- include navbar from partials -->
+<%- include('partials/navbar.ejs') %>
+<!-- include header from partials -->
+<%- include('partials/header.ejs') %>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= pergunta.titulo %>
+        </h5>
+        <hr />
+        <p class="card-body">
+          <%= pergunta.descricao %>
+        </p>
+      </div>
+      <div class="card-footer">
+        <form method="POST" action="/responder">
+          <textarea
+            name="corpo"
+            class="form-control navbarStyle"
+            placeholder="Digite Sua resposta"
+          ></textarea>
+          <input type="hidden" name="pergunta" value="<%=pergunta.id %>" />
+          <br />
+          <button type="submit" class="btn btn-danger backgroundButtonAsk">
+            Responder
+          </button>
+        </form>
+        <hr />
+        <br />
+        <h5>Respostas</h5>
+        <hr />
+        <p>
+          <% respostas.forEach(resposta => { %> <%= resposta.corpo %><br /><hr>
+          <% }) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- include navbar from partials -->
+<%- include('partials/footer.ejs') %>

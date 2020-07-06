@@ -1,0 +1,30 @@
+<!-- include navbar from partials -->
+<%- include('partials/navbar.ejs') %>
+<!-- include header from partials -->
+<%- include('partials/header.ejs') %>
+<body>
+  <div class="container">
+    <a href="/perguntar" class="btn btn-success float-right">Perguntar</a>
+    <br />
+    <div class="container">
+      <% perguntas.forEach(function(pergunta){ %>
+      <br />
+      <div class="card">
+        <div class="card-body">
+          <h2>
+            <a class="text-dark btn" href="/pergunta/<%= pergunta.id %>"
+              ><%= pergunta.titulo %></a
+            >
+          </h2>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-danger backgroundButtonAsk">Responder</button>
+        </div>
+      </div>
+      <br />
+      <% }) %>
+    </div>
+  </div>
+</body>
+<!-- include navbar from partials -->
+<%- include('partials/footer.ejs') %>

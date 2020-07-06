@@ -1,0 +1,28 @@
+body {
+  background-color: ;
+}
+.backgroundTitle {
+  background: #d32f2f;
+}
+.backgroundContent {
+  background-color: #ffffff;
+}
+
+.colorTitle {
+  color: #ffffff;
+}
+.primaryText {
+  color: #212121;
+}
+.backgroundButtonAsk {
+  background-color: #f44336;
+}
+.navBarIcon {
+  height: 10vh;
+  width: auto;
+  object-fit: fill;
+}
+.navbarStyle {
+  overflow: auto;
+  resize: none;
+}
