@@ -71,7 +71,7 @@ app.get("/pergunta/:id", (req, res) => {
 app.post("/salvarpergunta", (req, res) => {
   var titulo = req.body.titulo;
   var descricao = req.body.descricao;
-  if (titulo == "" || descricao == "") {
+  if (titulo == "") {
     res.redirect("/");
   } else {
     Pergunta.create({
@@ -100,6 +100,6 @@ app.post("/responder", (req, res) => {
 });
 
 //conexao bem sucedida
-app.listen(8080, () => {
+app.listen(80, () => {
   console.log("App rodando");
 });
